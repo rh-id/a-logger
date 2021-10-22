@@ -51,6 +51,13 @@ public class FileLogger implements ILogger {
         if (!mFile.exists()) {
             mFile.getParentFile().mkdirs();
             mFile.createNewFile();
+        } else {
+            // re-create file if log exceeds 20 MB
+            long size = mFile.length();
+            if (size > 20000000) {
+                mFile.delete();
+                mFile.createNewFile();
+            }
         }
         FileWriter fileWriter = new FileWriter(mFile, true);
         BufferedWriter bw = new BufferedWriter(fileWriter);
