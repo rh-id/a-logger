@@ -1,4 +1,5 @@
 # a-logger
+![Android CI](https://github.com/rh-id/a-logger/actions/workflows/gradlew-build.yml/badge.svg)
 
 This is a simple log library for android.
 It supports FileLogger to write logs to file, ToastLogger to show/display log toast message,
