@@ -18,10 +18,7 @@ public class AndroidLogger implements ILogger {
     }
 
     private boolean shouldPrint(int level) {
-        if (mLogLevel > level) {
-            return false;
-        }
-        return true;
+        return mLogLevel <= level;
     }
 
     @Override

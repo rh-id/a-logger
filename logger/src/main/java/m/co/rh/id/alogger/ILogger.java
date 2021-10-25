@@ -5,11 +5,11 @@ import android.util.Log;
 import java.util.concurrent.ExecutorService;
 
 public interface ILogger {
-    static final int VERBOSE = Log.VERBOSE;
-    static final int DEBUG = Log.DEBUG;
-    static final int INFO = Log.INFO;
-    static final int WARN = Log.WARN;
-    static final int ERROR = Log.ERROR;
+    int VERBOSE = Log.VERBOSE;
+    int DEBUG = Log.DEBUG;
+    int INFO = Log.INFO;
+    int WARN = Log.WARN;
+    int ERROR = Log.ERROR;
 
     /**
      * Same as {@link #v(String, String, Throwable)}

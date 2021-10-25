@@ -91,7 +91,7 @@ public class ToastLogger implements ILogger {
             }
             stringBuilder.append(msg);
             if (throwable != null) {
-                stringBuilder.append(": " + throwable.getMessage());
+                stringBuilder.append(": ").append(throwable.getMessage());
             }
             Toast.makeText(mAppContext, stringBuilder.toString(), mToastOptions.getToastLength())
                     .show();

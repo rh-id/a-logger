@@ -5,6 +5,10 @@ plugins {
 android {
     compileSdk 30
 
+    lintOptions {
+        abortOnError false
+    }
+
     defaultConfig {
         applicationId "m.co.rh.id.alogger.example"
         minSdk 16
@@ -32,7 +36,7 @@ android {
 
 dependencies {
 
-    implementation project(':alogger')
+    implementation project(':logger')
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.1'

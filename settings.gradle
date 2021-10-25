@@ -7,4 +7,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "a-logger"
 include ':example'
-include ':alogger'
+include ':logger'

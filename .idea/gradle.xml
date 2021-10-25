@@ -10,8 +10,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/alogger" />
             <option value="$PROJECT_DIR$/example" />
+            <option value="$PROJECT_DIR$/logger" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
