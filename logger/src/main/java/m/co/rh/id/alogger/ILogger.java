@@ -2,14 +2,19 @@ package m.co.rh.id.alogger;
 
 import android.util.Log;
 
-import java.util.concurrent.ExecutorService;
-
 public interface ILogger {
     int VERBOSE = Log.VERBOSE;
     int DEBUG = Log.DEBUG;
     int INFO = Log.INFO;
     int WARN = Log.WARN;
     int ERROR = Log.ERROR;
+
+    /**
+     * Set the log level for this logger
+     *
+     * @param logLevel {@link #VERBOSE},{@link #DEBUG},{@link #INFO},{@link #WARN},{@link #ERROR}
+     */
+    void setLogLevel(int logLevel);
 
     /**
      * Same as {@link #v(String, String, Throwable)}

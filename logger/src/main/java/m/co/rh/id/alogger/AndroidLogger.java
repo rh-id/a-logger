@@ -22,6 +22,11 @@ public class AndroidLogger implements ILogger {
     }
 
     @Override
+    public void setLogLevel(int logLevel) {
+        mLogLevel = logLevel;
+    }
+
+    @Override
     public void v(String tag, String message) {
         if (shouldPrint(ILogger.VERBOSE)) {
             Log.v(tag, message);

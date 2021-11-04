@@ -10,7 +10,7 @@ import android.widget.Toast;
  * Logger that shows toast message
  */
 public class ToastLogger implements ILogger {
-    private final int mLogLevel;
+    private int mLogLevel;
     private final Context mAppContext;
     private final Handler mMainHandler;
     private final ToastOptions mToastOptions;
@@ -96,6 +96,11 @@ public class ToastLogger implements ILogger {
             Toast.makeText(mAppContext, stringBuilder.toString(), mToastOptions.getToastLength())
                     .show();
         });
+    }
+
+    @Override
+    public void setLogLevel(int logLevel) {
+        mLogLevel = logLevel;
     }
 
     @Override

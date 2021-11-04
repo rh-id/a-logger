@@ -19,6 +19,13 @@ public class CompositeLogger implements ILogger {
     }
 
     @Override
+    public void setLogLevel(int logLevel) {
+        for (ILogger iLogger : mILoggerList) {
+            iLogger.setLogLevel(logLevel);
+        }
+    }
+
+    @Override
     public void v(String tag, String message) {
         for (ILogger iLogger : mILoggerList) {
             iLogger.v(tag, message);

@@ -115,6 +115,11 @@ public class FileLogger implements ILogger {
     }
 
     @Override
+    public void setLogLevel(int logLevel) {
+        mLogLevel = logLevel;
+    }
+
+    @Override
     public void v(String tag, String message) {
         println(VERBOSE, tag, message, null);
     }
