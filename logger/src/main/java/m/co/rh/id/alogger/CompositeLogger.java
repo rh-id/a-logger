@@ -25,6 +25,35 @@ public class CompositeLogger implements ILogger {
         }
     }
 
+    /**
+     * Set log level to all clazz type
+     *
+     * @param clazz    logger type
+     * @param logLevel log level to be set
+     */
+    public <L extends ILogger> void setLogLevel(Class<L> clazz, int logLevel) {
+        if (clazz == null) {
+            return;
+        }
+        for (ILogger iLogger : mILoggerList) {
+            if (clazz.isInstance(iLogger)) {
+                iLogger.setLogLevel(logLevel);
+            }
+        }
+    }
+
+    public <L extends ILogger> L getLogger(Class<L> clazz) {
+        if (clazz == null) {
+            return null;
+        }
+        for (ILogger iLogger : mILoggerList) {
+            if (clazz.isInstance(iLogger)) {
+                return (L) iLogger;
+            }
+        }
+        return null;
+    }
+
     @Override
     public void v(String tag, String message) {
         for (ILogger iLogger : mILoggerList) {
