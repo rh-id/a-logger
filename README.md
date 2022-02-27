@@ -8,4 +8,11 @@ This is a simple log library for android.
 It supports FileLogger to write logs to file, ToastLogger to show/display log toast message,
 and CompositeLogger to log to multiple loggers
 
-for example production app see ![a-news-provider](https://github.com/rh-id/a-news-provider)
+## Example project
+* ![a-news-provider](https://github.com/rh-id/a-news-provider)
+* ![a-flash-deck](https://github.com/rh-id/a-flash-deck)
+* ![a-medic-log](https://github.com/rh-id/a-medic-log)
+
+
+## Support this project
+![Bitcoin](https://img.shields.io/badge/Bitcoin-000000?style=for-the-badge&logo=bitcoin&logoColor=white&link=bitcoin://bc1qk9n2kljqyunqvlpyjxd4f4tt2xl0uwt2ak9xu4)
